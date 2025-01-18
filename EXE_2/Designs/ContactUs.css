@@ -1,0 +1,112 @@
+
+body {
+    align-items: center;
+}
+
+.container {
+    border: 0px solid #5f2f4e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(67, 24, 50, 0.54);
+    height: 50%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: right;
+    margin-bottom: 2%;
+    min-width: 350px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-item h4 {
+    font-size: 2rem;
+    color: #0f1010;
+    margin: 0;
+}
+
+.contact-item p {
+    font-size: 1.7rem;
+    color: #000000;
+    margin: 2px 0 0;
+}
+
+.working-hours {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+}
+
+.back-button {
+    display: flex;
+    height: 20%;
+    width: 40%;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-image: url("../Pictures/mobileBackg.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        background-blend-mode: multiply;
+        display: flex;
+        height: 97vh;
+        width: 97vw;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .back-button {
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+    }
+
+    .button, .submit {
+        width: 80%;
+    }
+
+    .container {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: right;
+    margin-bottom: 2%;
+    min-width: 250px;
+}
+.contact-item h4 {
+    font-size: 1.6rem;
+    color: #0f1010;
+    margin: 0;
+}
+
+.contact-item p {
+    font-size: 1.3rem;
+    margin: 2px 0 0;
+}
+
+}

@@ -1,0 +1,206 @@
+
+.form-group, .form-group2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.drive-form {
+    justify-content: flex-start;
+    gap: 5%;
+    width: 80%;
+    height: 70%;
+    padding: 40px;
+}
+
+
+label {
+    font-size: 2rem;
+    color: #000000;
+    width: auto;
+    text-align: right;
+    white-space: nowrap;
+    width: 20%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    font-size: 16px;
+}
+
+.Checkboxes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ed7d31;
+    border-color: #ff6a00;
+}
+
+.try {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.7rem;
+    width: 100%;
+    gap: 3%;
+    align-items: center;
+    color: #333;
+}
+
+.ButtonsRow {
+    display: flex;
+    height: 30%;
+    width: 50%;
+    gap: 10%;
+    justify-content: center;
+}
+
+
+@keyframes ripple {
+    0% {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+        height: 50px;
+        opacity: 0;
+    }
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.results-table th, .results-table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.results-table td {
+    padding: 15px;
+}
+
+.results-table th {
+    background-color: rgba(204, 91, 13, 0.74);
+    color: white;
+    font-weight: bold;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.results-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+@media screen and (max-width: 750px) {
+
+    .TotalHeader {
+        height: 15%;
+        margin-bottom: 1%;
+        margin-top: 1%;
+    }
+
+    body {
+        background-image: url("../Pictures/mobileBackg.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        background-blend-mode: multiply;
+        font-family: "My_Font", Helvetica, Arial, sans-serif;
+        display: flex;
+        height: 97vh;
+        width: 94vw;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .drive-form {
+        flex-direction: column;
+        width: 85%;
+        padding: 10px;
+        min-width: 200px;
+        height: 70%;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        width: 100%;
+    }
+
+    label {
+        width: 100%;
+        text-align: right;
+        margin-bottom: 5px;
+    }
+
+    select {
+        width: 100%;
+    }
+
+        input {
+        width: 93%;
+    }
+
+    .ButtonsRow {
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+    }
+
+    .button, .submit {
+        width: 80%;
+    }
+}
+
+
+
+
+
+

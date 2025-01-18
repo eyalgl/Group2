@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREMPUS - My Account</title>
+    <link rel="stylesheet" href="../Designs/global.css">
+    <link rel="stylesheet" href="../Designs/MyAccount.css">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        TREMPUS
+    </div>
+    <ul class="nav">
+        <li>
+            <a href="ContactUs.html">צור קשר</a>
+        </li>
+        <li>
+            <a href="PublishDrive.html">פרסם נסיעה</a>
+        </li>
+        <li>
+            <a href="RequestDrive.html">בקש נסיעה</a>
+        </li>
+        <li>
+            <a href="MyAccount.html">החשבון שלי</a>
+        </li>
+    </ul>
+</nav>
+
+<header class="TotalHeader">
+    <div class="MainHeader">
+        <div>
+            <h1>TREMPUS</h1>
+        </div>
+        <img src="../Pictures/Logo.png" alt="logo" class="logo-img">
+    </div>
+    <div class="ThirdHeader">
+        <div>
+            <h3>החשבון שלי</h3>
+        </div>
+    </div>
+</header>
+
+
+<form class="registration-form" action="#" method="post">
+    <div class="title">
+        <h5>החלפת סיסמה</h5>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <label for="password">:סיסמה ישנה</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <label for="password">:סיסמה חדשה</label>
+            <input type="password" id="newPassword" name="password" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <label for="password">:אימות סיסמה</label>
+            <input type="password" id="newPassword2" name="password" required>
+        </div>
+    </div>
+</form>
+
+<div class="ButtonsRow">
+    <button type="submit" id="submitButton" class="smallButton">החלף סיסמה</button>
+    <a href="Home.html" class="smallButton">חזרה לתפריט</a>
+</div>
+
+<script src="../JS_Files/MyAccount.js"></script>
+</body>
+</html>

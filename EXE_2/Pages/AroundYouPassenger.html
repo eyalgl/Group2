@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREMPUS - Around You</title>
+    <link rel="stylesheet" href="../Designs/global.css">
+    <link rel="stylesheet" href="../Designs/AroundYouPassenger.css">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        TREMPUS
+    </div>
+    <ul class="nav">
+        <li>
+            <a href="ContactUs.html">צור קשר</a>
+        </li>
+        <li>
+            <a href="PublishDrive.html">פרסם נסיעה</a>
+        </li>
+        <li>
+            <a href="RequestDrive.html">בקש נסיעה</a>
+        </li>
+        <li>
+            <a href="MyAccount.html">החשבון שלי</a>
+        </li>
+    </ul>
+</nav>
+
+<header class="TotalHeader">
+    <div class="MainHeader">
+        <div>
+            <h1>TREMPUS</h1>
+        </div>
+        <img src="../Pictures/Logo.png" alt="logo" class="logo-img">
+    </div>
+</header>
+
+
+<form action="#" method="post" class="drive-form">
+    <div class="form-group">
+        <label for="myLocation">:המיקום שלי</label>
+        <select id="myLocation" name="myLocation" required>
+            <option value="" disabled selected>בחר מיקום</option>
+            <option value="tel_aviv">אוניברסיטת תל אביב</option>
+            <option value="haifa">הטכניון, חיפה</option>
+            <option value="jerusalem">האוניברסיטה העברית, ירושלים</option>
+            <option value="beer_sheva">אוניברסיטת בן גוריון, באר שבע</option>
+            <option value="all">הכל</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>:נוסע לאזור</label>
+        <div class="Checkboxes">
+            <div class="try">
+                צפון<input type="checkbox" name="destinationRegion" value="north">
+            </div>
+            <div class="try">
+                מרכז<input type="checkbox" name="destinationRegion" value="center">
+            </div>
+            <div class="try">
+                דרום<input type="checkbox" name="destinationRegion" value="south">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>:זמן הנסיעה</label>
+        <div class="Checkboxes">
+            <div class="try">
+                השבוע<input type="checkbox" name="HitchhikeDay" value="north">
+            </div>
+            <div class="try">
+                מחר<input type="checkbox" name="HitchhikeDay" value="center">
+            </div>
+            <div class="try">
+                היום<input type="checkbox" name="HitchhikeDay" value="south">
+            </div>
+        </div>
+    </div>
+
+<table class="results-table">
+    <thead>
+        <tr>
+            <th>עלות</th>
+            <th>שם הנהג</th>
+            <th>שעת יציאה</th>
+            <th>תאריך יציאה</th>
+            <th>יעד</th>
+            <th>מוצא</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table></form>
+
+<div class="ButtonsRow">
+    <button type="submit" id="submitButton" class="smallButton">שגר בקשה</button>
+    <a href="Home.html" class="smallButton">חזרה לתפריט</a>
+</div>
+
+
+<script src="../JS_Files/PublishDrive.js"></script>
+</body>
+</html>

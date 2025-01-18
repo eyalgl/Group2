@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREMPUS - Feedback</title>
+    <link rel="stylesheet" href="../Designs/Global.css">
+    <link rel="stylesheet" href="../Designs/Feedback.css">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        TREMPUS
+    </div>
+    <ul class="nav">
+        <li>
+            <a href="ContactUs.html">צור קשר</a>
+        </li>
+        <li>
+            <a href="PublishDrive.html">פרסם נסיעה</a>
+        </li>
+        <li>
+            <a href="RequestDrive.html">בקש נסיעה</a>
+        </li>
+        <li>
+            <a href="MyAccount.html">החשבון שלי</a>
+        </li>
+    </ul>
+</nav>
+
+<header class="TotalHeader">
+    <div class="MainHeader">
+        <div>
+            <h1>TREMPUS</h1>
+        </div>
+        <img src="../Pictures/Logo.png" alt="logo" class="logo-img">
+    </div>
+    <div class="ThirdHeader">
+        <div>
+            <h3>מישוב נסיעה</h3>
+        </div>
+    </div>
+</header>
+
+
+<form action="#" method="post" class="feedback-form">
+    <div class="form-group">
+        <label for="driverName">:שם הנהג</label>
+        <input type="text" id="driverName" name="driverName" required>
+    </div>
+    <div class="form-group_row">
+        <div class="form-half">
+            <label for="driveDate">:תאריך</label>
+            <input type="date" id="driveDate" name="driveDate" required>
+        </div>
+        <div class="form-half">
+            <label for="driveHour">:שעה</label>
+            <input type="time" id="driveHour" name="driveHour" required>
+        </div>
+    </div>
+
+    <div class="form-group1">
+        <label for="feedback">:משוב</label>
+      <textarea id="feedback" name="feedback" rows="7" cols="100" maxlength="200">
+      </textarea>
+    </div>
+    <div class="rating">
+        <div><h4>:דרג</h4></div>
+        <div class="star-rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+        </div>
+
+        <script>
+            const stars = document.querySelectorAll('.star');
+
+            stars.forEach((star, index) => {
+                star.addEventListener('click', () => {
+                    stars.forEach((s, i) => {
+                        if (i <= index)
+                            s.classList.add('checked');
+                         else
+                            s.classList.remove('checked');
+                    });
+                });
+            });
+        </script>
+    </div>
+</form>
+
+<div class="ButtonsRow">
+    <button type="submit" id="submitButton" class="button">משב נסיעה</button>
+    <a href="Home.html" class="button">חזרה לתפריט</a>
+</div>
+
+<script src="../JS_Files/Feedback.js"></script>
+
+</body>
+</html>

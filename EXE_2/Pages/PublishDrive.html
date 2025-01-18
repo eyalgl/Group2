@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREMPUS - Publish Drive</title>
+    <link rel="stylesheet" href="../Designs/global.css">
+    <link rel="stylesheet" href="../Designs/PublishDrive.css">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">
+        TREMPUS
+    </div>
+    <ul class="nav">
+        <li>
+            <a href="ContactUs.html">צור קשר</a>
+        </li>
+        <li>
+            <a href="PublishDrive.html">פרסם נסיעה</a>
+        </li>
+        <li>
+            <a href="RequestDrive.html">בקש נסיעה</a>
+        </li>
+        <li>
+            <a href="MyAccount.html">החשבון שלי</a>
+        </li>
+    </ul>
+</nav>
+
+<header class="TotalHeader">
+    <div class="MainHeader">
+        <div>
+            <h1>TREMPUS</h1>
+        </div>
+        <img src="../Pictures/Logo.png" alt="logo" class="logo-img">
+    </div>
+    <div class="ThirdHeader">
+        <div>
+            <h3>פרסום נסיעה</h3>
+        </div>
+    </div>
+</header>
+
+
+<form action="#" method="post" class="drive-form">
+    <div class="form-group">
+        <label for="startPoint">:יוצא מ</label>
+        <select id="startPoint" name="startPoint" required>
+            <option value="" disabled selected>בחר נקודת התחלה</option>
+            <option value="tel_aviv">אוניברסיטת תל אביב</option>
+            <option value="haifa">הטכניון, חיפה</option>
+            <option value="jerusalem">האוניברסיטה העברית, ירושלים</option>
+            <option value="beer_sheva">אוניברסיטת בן גוריון, באר שבע</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="meetingPoint">:נקודת מפגש</label>
+        <select id="meetingPoint" name="meetingPoint" required>
+            <option value="" disabled selected>בחר נקודת מפגש</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="destination">:נוסע ל</label>
+        <input list="cityList" id="destination" name="destination" required placeholder="בחר עיר">
+        <datalist id="cityList"></datalist>
+    </div>
+    <script src="../JS_Files/loadCities.js"></script>
+    <div class="form-group_row">
+        <div class="form-half">
+            <label for="driveDate">:תאריך</label>
+            <input type="date" id="driveDate" name="driveDate" required>
+        </div>
+        <div class="form-half">
+            <label for="driveHour">:שעה</label>
+            <input type="time" id="driveHour" name="driveHour" required>
+        </div>
+    </div>
+
+    <div class="form-group2">
+        <label for="seatsAvailable">:מקומות פנויים</label>
+        <input type="number" id="seatsAvailable" name="seatsAvailable" value="1" min="1" max="6" required>
+    </div>
+</form>
+
+<div class="ButtonsRow">
+    <button type="submit" id="submitButton" class="smallButton">פרסם נסיעה</button>
+    <a href="Home.html" class="smallButton">חזרה לתפריט</a>
+</div>
+
+<img src="../Pictures/LoadCar.png" id="loadingCar" alt="Loading car">
+
+<script src="../JS_Files/PublishDrive.js"></script>
+</body>
+</html>

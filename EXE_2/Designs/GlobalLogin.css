@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'My_Font';
+    src: url("../Fonts/ZabalDEMO-Ultra.otf");
+}
+
+@font-face {
+    font-family: 'My_Font_Bold';
+    src: url("../Fonts/ZabalDEMO-ExtraBold.otf");
+}
+
+
+body {
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    display: flex;
+    height: 97vh;
+    width: 97vw;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: auto;
+    background-color: rgb(230, 228, 228);
+    color: white;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #ed7d31;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+h1 {
+    font-size: clamp(6vh, 5.5vw, 8vw);
+    font-family: 'My_Font';
+}
+
+h2 {
+    font-family: 'My_Font_Bold';
+    font-size: clamp(3vh, 3vw, 8vw);
+
+}
+
+h3 {
+    font-size: clamp(4vh, 3vw, 8vw);
+    margin: 0;
+    color: #ed7d31;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.logo-img {
+    width: clamp(50px, 7vw, 500px);
+}
+
+.smallButton {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: rgba(95, 47, 78, 0.8);
+    color: white;
+    border-radius: 10px;
+    border: 0.7px solid #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        height: 97vh;
+        width: 97vw;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h1, h2, h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+}
+

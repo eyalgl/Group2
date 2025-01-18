@@ -1,0 +1,51 @@
+.ThirdHeader {
+    margin-top: 5%;
+}
+
+.ButtonsRow {
+    display: flex;
+    height: 20%;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 2%;
+    margin-bottom: 50px;
+}
+
+.smallButton2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100px;
+    background-color: rgb(95, 47, 78);
+    color: white;
+    border-radius: 10px;
+    border: 0.7px solid #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 3rem;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.smallButton2:hover {
+    background-color: #ed7d31;
+    transition: background-color 0.6s ease;
+}
+
+.smallButton2:focus {
+    outline: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    .ButtonsRow {
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+    }
+}
