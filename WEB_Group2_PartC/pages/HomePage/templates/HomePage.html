@@ -1,0 +1,31 @@
+{% extends 'Base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('HomePage.static',filename='/CSS/HomePage.css') }}"/>
+{% endblock %}
+
+{% block SecondTitle %}
+    <div class="secondaryHeader">
+        <div>
+            <h2>STUDENTS CARPOOL APP</h2>
+        </div>
+    </div>
+    <div class="ThirdHeader">
+        <div>
+            <h3>ברוכים הבאים לאתר הטרמפים הסטודנטיאלי</h3>
+        </div>
+    </div>
+{% endblock %}
+
+{% block MainBlock %}
+    <section class="buttons">
+        <div class="button"><a href="myDrives">הנסיעות שלי</a></div>
+        <div class="button"><a href="Publish">פרסום נסיעה</a></div>
+        <div class="button"><a href="Feedback">מישוב נסיעה</a></div>
+        <div class="button"><a href="SearchDrive">חיפוש נסיעה</a></div>
+        <div class="button"><a href="MyAccount">החשבון שלי</a></div>
+        <div class="button"><a href="ContactUs">צור קשר</a></div>
+    </section>
+{% endblock %}
+

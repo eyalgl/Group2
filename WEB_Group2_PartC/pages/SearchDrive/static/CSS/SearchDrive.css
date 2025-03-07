@@ -1,0 +1,171 @@
+
+.TotalHeader {
+    height: 20%;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    width: 90%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2px;
+}
+
+
+.table-container {
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    text-align: center;
+}
+
+#searchResultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    direction: rtl;
+}
+
+#searchResultsTable th, #searchResultsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#searchResultsTable th {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.4rem;
+}
+
+#searchResultsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+    font-size: 1.2rem;
+}
+
+#searchResultsTable tr:nth-child(odd) {
+    background-color: #c3c3c3;
+    font-size: 1.2rem;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+input, select {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+.seat-select {
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.request-join-btn {
+    background-color: #af4e8c;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.request-join-btn:hover {
+    background-color: #5f2f4e;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+.ButtonsRow {
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .search-form {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 10px;
+    }
+
+    #searchResultsTable {
+        font-size: 1rem;
+    }
+
+    #searchResultsTable th,
+    #searchResultsTable td {
+        padding: 6px;
+        font-size: 1rem;
+    }
+
+    label {
+        font-size: 1.2rem;
+    }
+
+    input, select {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .seat-select {
+        font-size: 1rem;
+        padding: 3px;
+    }
+
+    .request-join-btn {
+        font-size: 0.9rem;
+        padding: 6px;
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,74 @@
+{% extends 'Base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('SearchDrive.static', filename='/CSS/SearchDrive.css') }}"/>
+{% endblock %}
+
+{% block SecondTitle %}
+    <div class="ThirdHeader">
+        <h3>חיפוש נסיעה</h3>
+    </div>
+{% endblock %}
+
+{% block MainBlock %}
+    <form id="searchForm" class="search-form">
+        <div class="form-group">
+            <label for="startDate">:נסיעות החל מתאריך</label>
+            <input type="date" id="startDate" name="startDate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="endDate">:עד תאריך</label>
+            <input type="date" id="endDate" name="endDate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="origin">:מוצא</label>
+            <select id="origin" name="origin" required>
+                <option value="" disabled selected>בחר אוניברסיטה</option>
+                <option value="beer_sheva">אוניברסיטת בן גוריון</option>
+                <option value="tel_aviv">אוניברסיטת תל אביב</option>
+                <option value="haifa">הטכניון</option>
+                <option value="jerusalem">האוניברסיטה העברית</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>:יעד</label>
+            <div class="radio-group">
+                <label><input type="radio" name="destination" value="south" required> דרום</label>
+                <label><input type="radio" name="destination" value="center"> מרכז</label>
+                <label><input type="radio" name="destination" value="north"> צפון</label>
+            </div>
+        </div>
+
+        <button type="submit" class="smallButton">חפש נסיעות</button>
+    </form>
+
+    <div class="table-container">
+        <table id="searchResultsTable">
+            <thead>
+            <tr>
+                <th>שם הנהג</th>
+                <th>אוניברסיטת מוצא</th>
+                <th>נקודת מפגש</th>
+                <th>יעד</th>
+                <th>תאריך יציאה</th>
+                <th>שעת יציאה</th>
+                <th>מקומות פנויים</th>
+                <th>בקשת הצטרפות</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="ButtonsRow">
+        <a href="/" class="smallButton">חזרה לתפריט</a>
+    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('SearchDrive.static', filename='JS/SearchDrive.js') }}"></script>
+{% endblock %}

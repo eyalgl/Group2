@@ -1,0 +1,41 @@
+<form class="registration-form" action="#" method="post">
+    <div class="row">
+        <div class="form-group">
+            <label for="firstName">:שם פרטי</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">:שם משפחה</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <label for="email">:דואר אלקטרוני</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">:סיסמה</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label for="phone">:מספר טלפון</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="institution">:מוסד אקדמי</label>
+            <select id="institution" name="institution" required>
+                <option value="" disabled selected>בחר מוסד אקדמי</option>
+                <option value="tel_aviv">אוניברסיטת תל אביב</option>
+                <option value="haifa">הטכניון, חיפה</option>
+                <option value="jerusalem">האוניברסיטה העברית, ירושלים</option>
+                <option value="beer_sheva">אוניברסיטת בן גוריון, באר שבע</option>
+                <option value="beer_sheva">אחר</option>
+            </select>
+        </div>
+    </div>
+</form>

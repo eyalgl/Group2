@@ -1,0 +1,26 @@
+{% extends 'Base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('Feedback.static',filename='/CSS/Feedback.css') }}"/>
+{% endblock %}
+
+{% block SecondTitle %}
+    <div class="ThirdHeader">
+        <div>
+            <h3>מישוב נסיעה</h3>
+        </div>
+    </div>
+{% endblock %}
+
+{% block MainBlock %}
+    {% include('FeedbackForm.html') %}
+    <div class="ButtonsRow">
+        <button type="submit" id="submitButton" class="smallButton">משב נסיעה</button>
+        <a href="/" class="smallButton">חזרה לתפריט</a>
+    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('Feedback.static', filename='JS/Feedback.js') }}"></script>
+{% endblock %}

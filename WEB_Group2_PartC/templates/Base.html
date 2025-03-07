@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    {% block page_head %}
+        <title> {{ pagename }} </title>
+
+        {% block page_head_meta %}
+            <base href="/"/>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% endblock %}
+
+        {#        {% block home_button %}#}
+        {#            {% include ('home_button.html') %}#}
+        {#        {% endblock %}#}
+
+        {% block styles %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}"/>
+        {% endblock %}
+    {% endblock %}
+</head>
+
+<body>
+
+{% block Navbar %}
+    {% include('Navbar.html') %}
+{% endblock %}
+
+{% block TotalTitle %}
+    <header class="TotalHeader">
+        {% include('MainTitle.html') %}
+        {% block SecondTitle %}
+
+        {% endblock %}
+    </header>
+{% endblock %}
+
+
+{% block MainBlock %}
+{% endblock %}
+
+{% block page_body_js %}
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+{#{% extends 'Base.html' %}#}
+{##}
+{#{% block styles %}#}
+{#    {{ super() }}#}
+{#    <link rel="stylesheet" href="{{ url_for('myDrives.static', filename='CSS/myDrives.css') }}"/>#}
+{#{% endblock %}#}
+{##}
+{#{% block SecondTitle %}#}
+{#    <div class="ThirdHeader">#}
+{#        <div>#}
+{#            <h3>הנסיעות שלי</h3>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}
+{##}
+{#{% block MainBlock %}#}
+{#    <div class="container">#}
+{#        <!-- עמודת נהג -->#}
+{#        <div class="column">#}
+{#            <h4>:נסיעות שפרסמתי</h4>#}
+{#            <table id="driverDrivesTable">#}
+{#                <thead>#}
+{#                    <tr>#}
+{#                        <th>אוניברסיטת מוצא</th>#}
+{#                        <th>נקודת מפגש</th>#}
+{#                        <th>יעד</th>#}
+{#                        <th>תאריך יציאה</th>#}
+{#                        <th>שעת יציאה</th>#}
+{#                        <th>מקומות פנויים</th>#}
+{#                        <th>בטל נסיעה</th>#}
+{#                    </tr>#}
+{#                </thead>#}
+{#                <tbody></tbody>#}
+{#            </table>#}
+{##}
+{#            <h4>:בקשות הצטרפות לנסיעות שלי</h4>#}
+{#            <table id="requestsTable">#}
+{#                <thead>#}
+{#                    <tr>#}
+{#                        <th>שם הנוסע</th>#}
+{#                        <th>מספר מקומות מבוקש</th>#}
+{#                        <th>אשר</th>#}
+{#                        <th>דחה</th>#}
+{#                    </tr>#}
+{#                </thead>#}
+{#                <tbody></tbody>#}
+{#            </table>#}
+{#        </div>#}
+{##}
+{#        <!-- עמודת נוסע -->#}
+{#        <div class="column">#}
+{#            <h4>:נסיעות בהן אני נוסע</h4>#}
+{#            <table id="passengerDrivesTable">#}
+{#                <thead>#}
+{#                    <tr>#}
+{#                        <th>שם הנהג</th>#}
+{#                        <th>יעד</th>#}
+{#                        <th>תאריך יציאה</th>#}
+{#                        <th>שעת יציאה</th>#}
+{#                        <th>סטטוס</th>#}
+{#                    </tr>#}
+{#                </thead>#}
+{#                <tbody></tbody>#}
+{#            </table>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="ButtonsRow">#}
+{#        <a href="/" class="smallButton">חזרה לתפריט</a>#}
+{#    </div>#}
+{#{% endblock %}#}
+{##}
+{#{% block page_body_js %}#}
+{#    <script src="{{ url_for('myDrives.static', filename='JS/myDrives.js') }}"></script>#}
+{#{% endblock %}#}
+{##}
+
+{% extends 'Base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('myDrives.static', filename='CSS/myDrives.css') }}"/>
+{% endblock %}
+
+{% block SecondTitle %}
+    <div class="ThirdHeader">
+        <div>
+            <h3>הנסיעות שלי</h3>
+        </div>
+    </div>
+{% endblock %}
+
+{% block MainBlock %}
+    <div class="container">
+        <!-- עמודת נהג -->
+        <div class="column">
+            <h4>:נסיעות שפרסמתי</h4>
+            <table id="driverDrivesTable">
+                <thead>
+                    <tr>
+                        <th>מספר נסיעה</th>
+                        <th>אוניברסיטת מוצא</th>
+                        <th>נקודת מפגש</th>
+                        <th>יעד</th>
+                        <th>תאריך יציאה</th>
+                        <th>שעת יציאה</th>
+                        <th>מקומות פנויים</th>
+                        <th>בטל נסיעה</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h4>:בקשות הצטרפות לנסיעות שלי</h4>
+            <table id="requestsTable">
+                <thead>
+                    <tr>
+                        <th>מספר נסיעה</th>
+                        <th>שם הנוסע</th>
+                        <th>מספר מקומות מבוקש</th>
+                        <th>אשר</th>
+                        <th>דחה</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- עמודת נוסע -->
+        <div class="column">
+            <h4>:נסיעות בהן אני נוסע</h4>
+            <table id="passengerDrivesTable">
+                <thead>
+                    <tr>
+                        <th>שם הנהג</th>
+                        <th>יעד</th>
+                        <th>תאריך יציאה</th>
+                        <th>שעת יציאה</th>
+                        <th>סטטוס</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="ButtonsRow">
+        <a href="/" class="smallButton">חזרה לתפריט</a>
+    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('myDrives.static', filename='JS/myDrives.js') }}"></script>
+{% endblock %}
+

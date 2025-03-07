@@ -1,0 +1,35 @@
+{% extends 'Base.html' %}
+
+{% block Navbar %}
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('CreateAccount.static',filename='/CSS/CreateAccount.css') }}"/>
+{% endblock %}
+
+{% block SecondTitle %}
+    <div class="secondaryHeader">
+        <div>
+            <h2>STUDENTS CARPOOL APP</h2>
+        </div>
+    </div>
+    <div class="ThirdHeader">
+        <div>
+            <h3>צור חשבון</h3>
+        </div>
+    </div>
+{% endblock %}
+
+{% block MainBlock %}
+    {% include('CreateAccountForm.html') %}
+    <div class="ButtonsRow">
+        <button type="submit" id="submitButton" class="smallButton">הירשם</button>
+        <button type="button" class="smallButton" onclick="window.location.href='Login'">חזרה להתחברות</button>
+        <button type="button" class="smallButton" onclick="window.location.href='ContactUsNotLogged'">צור קשר</button>
+    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('CreateAccount.static', filename='JS/CreateAccount.js') }}"></script>
+{% endblock %}

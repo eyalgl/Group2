@@ -1,0 +1,180 @@
+.TotalHeader {
+    height: 20%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    height: 50%;
+    width: 90%;
+}
+
+.column {
+    width: 45%;
+    padding: 15px;
+    background-color: rgba(95, 47, 78, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 90%;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    direction: rtl;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #c3c3c3;
+}
+
+.delete-column {
+    text-align: center;
+}
+
+.delete-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.delete-icon:hover {
+    transform: scale(1.2);
+}
+
+.action-column {
+    text-align: center;
+}
+
+.accept-button, .reject-button {
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accept-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.accept-button:hover {
+    background-color: #218838;
+}
+
+.reject-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.reject-button:hover {
+    background-color: #c82333;
+}
+
+#joinRequestsTable {
+    margin-top: 20px;
+}
+
+#passengerRequestsTable {
+    margin-top: 20px;
+}
+
+.status-cell {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.status-pending {
+    background-color: #ffa500;  /* כתום */
+    color: black;
+}
+
+.status-approved {
+    background-color: #28a745;  /* ירוק */
+    color: white;
+}
+
+.status-rejected {
+    background-color: #dc3545;  /* אדום */
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .column {
+        width: 90%;
+        height: auto;
+        max-height: none;
+        padding: 5px;
+    }
+
+    h4 {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 2rem;
+    }
+
+    table {
+        font-size: 1rem;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 1rem;
+    }
+
+    .delete-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .accept-button, .reject-button {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+    .smallButton{
+        margin-top: 10px;
+    }
+
+    #joinRequestsTable, #passengerRequestsTable {
+        margin-top: 10px;
+    }
+}
+

@@ -1,0 +1,229 @@
+.TotalHeader {
+    height: 20%;
+}
+
+.drive-form {
+    border: 0px solid #5f2f4e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(95, 47, 78, 0.2);
+    width: 90%;
+    max-width: 600px;
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: 40%;
+    min-height: 40%;
+    justify-content: space-around;
+    margin-bottom: 2%;
+}
+
+.form-group, .form-group2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+}
+
+label {
+    font-size: 1.5rem;
+    color: #000000;
+    width: auto;
+    text-align: right;
+    white-space: nowrap;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    width: 15%;
+    min-width: 80px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+.form-group_row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 10%;
+    width: 100%;
+    min-width: 500px;
+}
+
+.form-half {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 48%;
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.ButtonsRow {
+    display: flex;
+    height: 30%;
+    width: 50%;
+    gap: 10%;
+    justify-content: center;
+}
+
+
+@keyframes ripple {
+    0% {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+    100% {
+        width: 200px;
+        height: 50px;
+        opacity: 0;
+    }
+}
+
+#loadingCar {
+    position: fixed;
+    bottom: 10px;
+    right: -150px;
+    width: 130px;
+    height: auto;
+    z-index: 1000;
+    display: none;
+}
+
+@keyframes driveCar {
+    from {
+        right: -150px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 750px) {
+
+    .TotalHeader {
+        height: 15%;
+        margin-bottom: 1%;
+        margin-top: 1%;
+    }
+
+    /*body {*/
+    /*    background-image: url("../../static/pictures/mobileBackg.png");*/
+    /*    background-size: cover;*/
+    /*    background-attachment: fixed;*/
+    /*    background-color: rgba(255, 255, 255, 0.8);*/
+    /*    background-blend-mode: multiply;*/
+    /*    font-family: "My_Font", Helvetica, Arial, sans-serif;*/
+    /*    display: flex;*/
+    /*    height: 97vh;*/
+    /*    width: 100vw;*/
+    /*    flex-direction: column;*/
+    /*    justify-content: center;*/
+    /*}*/
+
+    .drive-form {
+        flex-direction: column;
+        width: 85%;
+        padding: 10px;
+        min-width: 200px;
+        height: 70%;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .form-group2 {
+        flex-direction: row-reverse;
+    }
+
+    label {
+        width: 100%;
+        text-align: right;
+        margin-bottom: 5px;
+    }
+
+    select {
+        width: 100%;
+    }
+
+        input {
+        width: 93%;
+    }
+
+    .form-group_row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        min-width: 150px;
+        gap: 5px;
+    }
+
+    .form-half {
+        justify-content: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .ButtonsRow {
+        gap: 15px;
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .button, .submit {
+        width: 80%;
+    }
+
+    .smallButton {
+        height: 50px;
+        font-size: clamp(16px, 5vw, 40px);
+        width: 45%;
+        min-width: 120px;
+    }
+}

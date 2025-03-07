@@ -1,0 +1,28 @@
+<nav class="navbar">
+    <div class="logo">
+        <a href="/home">TREMPUS</a>
+        {% if session['logged_in'] %}
+            <span class="username"> | {{ session['fullName'] }} </span>
+        {% endif %}
+    </div>
+    <ul class="nav">
+        {% if session['logged_in'] %}
+            <li>
+                <a href="{{ url_for('Login.logout_func') }}">התנתק</a>
+            </li>
+        {% endif %}
+        <li>
+            <a href="ContactUs">צור קשר</a>
+        </li>
+        <li>
+            <a href="SearchDrive">חפש נסיעה</a>
+        </li>
+        <li>
+            <a href="Publish">פרסם נסיעה</a>
+        </li>
+        <li>
+            <a href="MyAccount">החשבון שלי</a>
+        </li>
+
+    </ul>
+</nav>

@@ -1,0 +1,27 @@
+{% extends 'Base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('PublishDrive.static',filename='/CSS/PublishDrive.css') }}"/>
+{% endblock %}
+
+{% block SecondTitle %}
+    <div class="ThirdHeader">
+        <div>
+            <h3>פרסום נסיעה</h3>
+        </div>
+    </div>
+{% endblock %}
+
+{% block MainBlock %}
+    {% include('PublishDriveForm.html') %}
+    <div class="ButtonsRow">
+        <button type="submit" id="submitButton" class="smallButton">פרסם נסיעה</button>
+        <a href="/" class="smallButton">חזרה לתפריט</a>
+    </div>
+    <img src="/static/Pictures/LoadCar.png" id="loadingCar" alt="Loading car">
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('PublishDrive.static', filename='JS/PublishDrive.js') }}"></script>
+{% endblock %}

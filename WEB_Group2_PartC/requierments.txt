@@ -1,0 +1,9 @@
+Libraries:
+
+* flask
+* werkzeug.security
+* bason
+* datetime
+* pymongo
+* os
+* dotenv
